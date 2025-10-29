@@ -1,0 +1,10 @@
+dask
+dask-ml
+distributed
+jupyterlab
+numpy
+pandas
+matplotlib
+requests 
+aiohttp
+graphviz
