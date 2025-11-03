@@ -44,6 +44,12 @@ venv\Scripts\activate.bat
 
 ```
 
+Em seguida, execute o seguinte comando para baixar as bibliotecas utilizadas:
+
+```
+pip install -r requirements.txt
+```
+
 ## Iniciando Dask
 Após esta etapa, execute o seguinte comando na máquina que será o seu scheduler do dask:
 
@@ -85,3 +91,13 @@ dask worker tcp://ip_scheduler:8786 --nthreads 2 --memory-limit 2GB
 
 dask worker tcp://ip_scheduler:8786 --nthreads 2 --memory-limit 4GB
 ```
+
+Estes comandos limitam o uso do recurso computacional da máquina que será um worker,
+caso queira utilizar todos os recursos disponíveis, utilize o seguinte comando:
+
+```
+dask worker tcp://ip_scheduler:8786
+```
+
+Para visualizar os grafos de tarefa disponíveis no notebook é necessário instalar o 
+software do graphviz, através do link: https://graphviz.org/download/
